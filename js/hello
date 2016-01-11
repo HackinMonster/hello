@@ -2,4 +2,28 @@
 
 'use strict' 
 
-console.log("Hello World")
+var c = require("skilstak-colors");
+
+
+var printPlain = function () {
+  console.log(c.clear + c.rc() + "Hello world" + c.x);
+}
+
+var printColor = function () {
+  while (true) {
+    console.log(c.clear + c.rc() + "Hello World" + c.x);
+  }
+}
+
+var printNyan = function () {
+  while (true) {
+  console.log(c.rc() + "Hello world" + c.x);
+
+  }
+}
+
+printNyan();
+
+printPlain();
+
+printColor();
