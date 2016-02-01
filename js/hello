@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-'use strict' 
+'use strict'
+
 
 var c = require("skilstak-colors");
 
@@ -23,7 +24,11 @@ var printNyan = function (message) {
 var printMulti = function (message) {
   console.log(c.multi(message));
 
-    }    
 
-printNyan("Biscuits");
+    }
+
+var name = process.argv[2];
+
+
+printNyan(name);
 
