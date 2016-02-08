@@ -21,14 +21,25 @@ var printNyan = function (message) {
   console.log(c.rc() + message + c.x);
   } 
 }
+
 var printMulti = function (message) {
   console.log(c.multi(message));
 
 
     }
 
-var name = process.argv[2];
 
+var name = "World";
 
-printNyan(name);
+var option = "-m";
+
+var firstValue = process.argv[2];
+if (firstValue[0] === "-") {
+  option = firstValue;
+  console.log("I have a switch: " + option);
+}
+
+if (option === "-m") {
+  printMulti(name);
+}
 
